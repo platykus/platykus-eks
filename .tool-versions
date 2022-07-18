@@ -1,0 +1,4 @@
+make 4.3
+terraform 1.2.5
+terraform-docs 0.16.0
+tflint 0.38.1

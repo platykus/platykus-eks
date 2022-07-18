@@ -1,0 +1,33 @@
+version: ">= 0.16.0"
+formatter: "markdown table"
+html: false
+
+content: |
+  {{ .Header }}
+
+  {{ .Requirements }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+
+sections:
+  show:
+    - header
+    - requirements
+    - inputs
+    - outputs
+    - footer
+
+settings:
+  anchor: false
+  color: false
+  escape: false
